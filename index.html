@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    /* Base Styles -------------------- */
+
+      h2 {
+        padding-top: 20px;
+      }
+      textarea {
+        outline: none;
+        resize: none;
+      }
+
+      /* Main Styles --------------------- */
+
+      .main-header {
+        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .inputField {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+       <div class="primary-content container">
+        <header class="main-header text-center">
+         
+          <i class="fa-solid fa-phone-flip"></i>
+          <p class="lead">ถ้าท่านติดขัดปัญหากรุณาติดต่อมาหาเราด่วน</p>
+        </header>
+        <div id="container" class="primary-content form-group">
+          <h2>ติดต่อเรา</h2><br>
+          <form id="responderForm">
+            <div class="row">
+              <div class="col">
+                <input type="text" name="firstName" class="input-field form-control" name="firstName" placeholder="First Name:" required><br>
+              </div>
+                <div class="col">
+                  <input type="text" name="lastName" class="input-field form-control" name="lastName" placeholder="Last Name:" required><br>
+               </div>
+            </div>
+              <input type="email" name="email" class="input-field form-control" placeholder="Email:" required><br>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="service">ตัวเลือกการสอบถาม</label>
+              </div>
+                <select class="custom-select" id="service" required>
+                  <optgroup class="input-field form-control" label="คำถามของของฉันเกี่ยวกับ:">
+                    <option value="Choose" name="service" disabled selected>กรุณาเลือกรายการด้านล่างนี้:</option>
+                    <option value="กรุณามาช่วยฉันเขียนโปรแกรมที่บ้านฉันหน่อยได้ไหม ฉันไม่เข้าใจเลย" name="service">กรุณามาช่วยฉันเขียนโปรแกรมที่บ้านฉันหน่อยได้ไหม ฉันไม่เข้าใจเลย</option>
+                    <option value="โปรแกรม APPS Cript ยากจริงๆ จนทำให้ฉันงง" name="service">โปรแกรม APPS Cript ยากจริงๆ จนทำให้ฉันงง</option>
+                    <option value="กรุณาให้คำแนะนำฉันมากกว่านี้" name="service">กรุณาให้คำแนะนำฉันมากกว่านี้ </option>
+                    <option value="เราขอทำงานร่วมกับคุณด้วยได้ไหม" name="service">เราขอทำงานร่วมกับคุณด้วยได้ไหม</option>
+                    <option value="ฉันสามารถช่วยเขียนโปรแกรมร่วมด้วยได้ไหม" name="service">ฉันสามารถช่วยเขียนโปรแกรมร่วมด้วยได้ไหม</option>
+                    <option value="ฉันขอเป็นหุ้นส่วนกับคุณได้ไหม" name="service">ฉันขอเป็นหุ้นส่วนกับคุณได้ไหม</option>
+                     <option value="ถ้ามีซองผ้าป่ามา ฉันขอร่มทำบุญด้วย เพราะฉันสายบุญ" name="service">ถ้ามีซองผ้าป่ามา ฉันขอร่มทำบุญด้วย เพราะฉันสายบุญ</option>
+                    <option value="ต้องการสื่อการสอนวิอีโอ" name="service">ต้องการสื่อการสอน วิอีโอ เพาเวอร์พอยด์</option>
+                    <option value="ค่าสมัครเรียนเขียนโปรแกรมแพงไหม " name="service">ค่าสมัครเรียนเขียนโปรแกรมแพงไหม </option>
+                  </optgroup>
+                  <optgroup class="input-field form-control" label="ความคิดเห็นของคุณ:">
+                    <option value="น่าเบื่อสุดๆๆๆ" name="feedback">น่าเบื่อสุดๆๆๆ</option>
+                    <option value="ทำไมครูหลงตัวเองขนาดนี้" name="feedback">ทำไมครูหลงตัวเองขนาดนี้</option>
+                  
+                     <option value="ครูมีแฟนยังค่ะะ ถ้าไม่มี บอกหนูเป็นคนแรกน๊ะ หนูเป็นกระเทยค่ะ ว้ายๆๆๆๆ" name="feedback">ครูมีแฟนยังค่ะะ ถ้าไม่มี บอกหนูเป็นคนแรกน๊ะ หนูเป็นกระเทยค่ะ ว้ายๆๆๆๆ</option>
+                    
+    
+                  </optgroup>
+                  <optgroup class="input-field form-control" label="เปลี่ยนวิธีที่เราติดต่อคุณ">
+                    <option value="อัปเดตตัวเลือกการเชื่อมต่อของคุณ" name="gdprRights">อัปเดตตัวเลือกการเชื่อมต่อของคุณ</option>
+                  </optgroup>
+                  <optgroup class="input-field form-control" label="ไม่มีข้อใดที่กล่าวมา:">
+                    <option value="อื่นๆ" name="feedback">สำหรับคำถามใด ๆ ที่ไม่ได้ระบุไว้ข้างต้น โปรดระบุด้านล่างนี้</option>
+                  </optgroup><br>
+             </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="message">ตัวเลือกข้อความ</label>
+          </div>
+            <select class="custom-select" id="message" required>
+              <option value="Choose" name="message" disabled selected>กรุณาเลือกประเภทของข้อความด้านล่าง:</option>
+              <option value=" คำถามทั่วไป" name="message">คำถามทั่วไป</option>
+              <option value="ต้องการข้อมูล" name="message">ต้องการข้อมูล</option>
+              <option value="สอบถามร่วมทำบุญ ซองผ้าป่า สามัคคี สร้างวัดสร้างโรงเรียน" name="message">สอบถามร่วมทำบุญ ซองผ้าป่า สามัคคี สร้างวัดสร้างโรงเรียน</option>
+              <option value="คืนนี้คู่แมนยูกับลิปเวอร์ใครชนะ/เที่ยงนี้บาซิลกับอังกฤษเตะกันวันนี้ใครจะชนะ" name="message">คืนนี้คู่แมนยูกับลิปเวอร์ใครชนะ/เที่ยงนี้บาซิลกับอังกฤษเตะกันวันนี้ใครจะชนะ</option>
+              <option value="ข้อเสนอแนะ" name="message">ข้อเสนอแนะ</option>
+              <option value="อื่น ๆ" name="message">อื่น ๆ</option>
+            </select>
+          </div>
+          <textarea id="enquiry_form" class="text-input form-control" rows="10" cols="50" placeholder="Enter your message here" required></textarea><br><br>
+          <input type="submit" name="submit" value="SUBMIT" class="event input-field btn btn-outline btn-primary"><br><br>
+        </form>
+      </div>
+      <p class="lead">ถ้าท่านต้องการทำงานกับเราคลิ๊กตรงนี้ 
+        <a href="
+        <!-- https://script.google.com/macros/s/AKfycbzgJocuQkGycAocm6sonjmrpZrTYBaDyCzLijKOdCq8Ckp-yXBch64qOaJ4T8Ga5g/exec -->
+        " target="_blank">ตรงนี้:</a></p>
+      <!-- https://docs.google.com/spreadsheets/d/1JDgGDNyDKHQqh7kzkBNHsMw2KiFlXWSm9f69_xJTi_o/edit#gid=1280767049 -->
+      <footer class="main-footer text-center lead">
+        <address >
+          <p><i class="fa-solid fa-phone-flip"></i></p>
+          <telephone>เบอร์โทรศัพท์:</telephone>
+          <p>&copy; </p>
+        </address>
+      </footer>
+      <script>
+        const myForm = document.querySelector('#responderForm');
+        console.log(myForm);
+        myForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        let myData = {
+        'first' : this.querySelector('input[name="firstName"]').value,
+        'last' : this.querySelector('input[name="lastName"]').value,
+        'email' : this.querySelector('input[name="email"]').value,
+        'service' : this.querySelector('select[id="service"]').value,
+        'enquiryType' : this.querySelector('select[id="message"]').value,
+        'enquiry': this.querySelector('textarea[id="enquiry_form"]').value
+        }
+
+        google.script.run.withSuccessHandler(onSuccess).addData(myData);
+        console.dir(myData);
+        document.getElementById("responderForm").reset(); 
+
+        })
+
+        function onSuccess(data){
+          console.log(data);
+        }
+     </script>
+   </div>
+  </body>
+</html>
